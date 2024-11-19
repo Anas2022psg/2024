@@ -1,0 +1,148 @@
+/* Styles de base */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body, html {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: radial-gradient(circle, #1a2a6c, #b21f1f, #fdbb2d);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 20px;
+    max-width: 360px;
+    width: 90%;
+    height: 90vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+}
+
+/* En-tête */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+    margin: 10px 0 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Section principale */
+main {
+    padding: 20px;
+    flex: 1;
+    backdrop-filter: blur(10px);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-item {
+    display: block;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 15px;
+    margin: 5px 0;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background 0.3s, transform 0.3s;
+    animation: neonGlow 1.5s infinite alternate;
+}
+
+.link-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Pied de page */
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .link-item {
+        padding: 10px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    .link-item {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 6px;
+        font-size: 14px;
+    }
+}
+
+/* Animations CSS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes neonGlow {
+    from { box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff1177, 0 0 20px #ff1177, 0 0 25px #ff1177; }
+    to { box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 60px #ff1177; }
+}
